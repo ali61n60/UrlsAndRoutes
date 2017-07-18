@@ -9,11 +9,14 @@ namespace UrlsAndRoutes.Controllers
 {
     public class HomeController:Controller
     {
-        public ViewResult Index() => View("Result",
-            new Result
+        public ViewResult Index()
+        {
+            Result result = new Result
             {
                 Controller = nameof(HomeController),
                 Action = nameof(Index)
-            });
+            };
+            return View("Result",result);
+        }
     }
 }
