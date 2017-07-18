@@ -27,7 +27,7 @@ namespace UrlAndRoutes
             app.UseStaticFiles();
             app.UseMvc(routes =>
             {
-                routes.MapRoute(name: "default", template: "{controller}/{action}",defaults:new {controller = "Home",action ="Index"});
+                routes.MapRoute(name: "default", template: "{controller=Admin}/{action=Index}");
             });
         }
     }
