@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace UrlsAndRoutes
+namespace UrlAndRoutes
 {
     public class Startup
     {
@@ -25,7 +25,7 @@ namespace UrlsAndRoutes
             app.UseStatusCodePages();
             app.UseDeveloperExceptionPage();
             app.UseStaticFiles();
-            app.UseMvc();
+            app.UseMvcWithDefaultRoute();
         }
     }
 }
