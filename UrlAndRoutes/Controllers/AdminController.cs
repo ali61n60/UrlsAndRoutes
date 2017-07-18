@@ -5,14 +5,14 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using UrlAndRoutes.Models;
 
-namespace UrlsAndRoutes.Controllers
+namespace UrlAndRoutes.Controllers
 {
-    public class HomeController:Controller
+    public class AdminController:Controller
     {
         public ViewResult Index() => View("Result",
             new Result
             {
-                Controller = nameof(HomeController),
+                Controller = nameof(AdminController),
                 Action = nameof(Index)
             });
     }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace UrlsAndRoutes.Models
+namespace UrlAndRoutes.Models
 {
     public class Result
     {
