@@ -27,12 +27,14 @@ namespace UrlAndRoutes
             app.UseStaticFiles();
             app.UseMvc(routes =>
             {
-                routes.MapRoute(name: "MyRouteCatchAll",template: "{controller=Home}/{action=Index}/{id?}/{*catchall}");
-                    routes.MapRoute(name: "MyRouteOptional",template: "{controller=Home}/{action=Index}/{id?}");
-                routes.MapRoute(name: "MyRoute", template: "{controller=Home}/{action=Index}/{id=DedaultId}");
-                routes.MapRoute("", "X{controller}/{action}");
-                routes.MapRoute(name: "default", template: "{controller=Admin}/{action=Index}");
-                routes.MapRoute(name: "",template: "Public/{controller=Home}/{action=Index}");
+                //routes.MapRoute(
+                //    name: "NewRoute",
+                //    template: "App/Do{action}",
+                //    defaults: new { controller = "Home" });
+
+                routes.MapRoute(
+                        name: "default",
+                        template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
