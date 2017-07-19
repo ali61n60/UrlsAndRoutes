@@ -9,7 +9,7 @@ namespace UrlsAndRoutes.Controllers
 {
     public class HomeController:Controller
     {
-        public ViewResult Index(string id)
+        public ViewResult Index()
         {
             Result result = new Result
             {
@@ -20,14 +20,14 @@ namespace UrlsAndRoutes.Controllers
             return View("Result",result);
         }
 
-        public ViewResult CustomVariable()
+        public ViewResult CustomVariable(string id)
         {
             Result r = new Result
             {
                 Controller = nameof(HomeController),
                 Action = nameof(CustomVariable),
             };
-            r.Data["id"] = RouteData.Values["id"];
+            r.Data["id"] = id;
             return View("Result", r);
         }
     }
