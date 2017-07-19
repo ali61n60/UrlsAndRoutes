@@ -27,7 +27,7 @@ namespace UrlAndRoutes
             app.UseStaticFiles();
             app.UseMvc(routes =>
             {
-                routes.MapRoute(name: "MyRoute",template: "{controller=Home}/{action=Index}/{id?}");
+                routes.MapRoute(name: "MyRouteOptional",template: "{controller=Home}/{action=Index}/{id?}");
                 routes.MapRoute(name: "MyRoute", template: "{controller=Home}/{action=Index}/{id=DedaultId}");
                 routes.MapRoute("", "X{controller}/{action}");
                 routes.MapRoute(name: "default", template: "{controller=Admin}/{action=Index}");
